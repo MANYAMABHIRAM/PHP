@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armstrong</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+        <table border="2" align="center" bgcolor=#FCFFE7 bordercolor=#2B3467 width="38%">
+            <tr>
+                <td colspan="2" align="center" style="color:#3F3B6C;"> <h1>Armstrong number</h1></td>
+            </tr>
+            <tr>
+                <td align="center">Enter number:</td>
+                <td align="center"><input type="text" name="n" autofocus></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+                
+            </tr>
+    </form>
+    <?php if($_POST)
+    {
+    $n1=$_POST["n"];
+    $m=$n1;
+    $s=0;
+    while($n1>0)
+    {
+    $r=$n1%10;
+    $n1=$n1/10;
+    $s=$s+($r*$r*$r);
+    }
+
+    echo '<table align="center" border="2" width="38%" bordercolor=#1C315E bgcolor=#1C315E><tr align="center"><td><br>'; echo '<font color=#E6E2C3>';
+    if($m==$s)
+    echo"<h2> $m is Armstrong Number</h2>"; else
+    echo"<h2> $m is not Armstrong Number</h2>";
+    }
+    echo'</font>'; echo'</td></tr></table>';
+?>
+    </body>
+</html>
